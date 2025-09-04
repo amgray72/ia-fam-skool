@@ -2,39 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* IA Family Skool Design System - Beautiful, family-friendly AI learning platform */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 10% 98%;
+    --foreground: 235 25% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 235 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 235 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* AI Tech Gradient Primary - Blue to Purple */
+    --primary: 245 85% 58%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 250 75% 68%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Playful Secondary - Soft Purple */
+    --secondary: 260 60% 95%;
+    --secondary-foreground: 260 25% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 15% 96%;
+    --muted-foreground: 235 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Fun Accent - Orange for CTAs */
+    --accent: 25 95% 62%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success Green for achievements */
+    --success: 145 85% 48%;
+    --success-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 240 20% 90%;
+    --input: 240 20% 94%;
+    --ring: 245 85% 58%;
+
+    /* Design System Tokens */
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(245, 85%, 58%) 0%, hsl(270, 80%, 65%) 100%);
+    --gradient-secondary: linear-gradient(135deg, hsl(25, 95%, 62%) 0%, hsl(35, 90%, 68%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(240, 100%, 95%) 0%, hsl(250, 100%, 98%) 50%, hsl(260, 100%, 96%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(240, 20%, 99%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(245, 85%, 58%, 0.1);
+    --shadow-medium: 0 8px 30px hsl(245, 85%, 58%, 0.15);
+    --shadow-strong: 0 12px 40px hsl(245, 85%, 58%, 0.2);
+    --shadow-glow: 0 0 30px hsl(245, 85%, 68%, 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
