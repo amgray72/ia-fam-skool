@@ -49,6 +49,7 @@
     --gradient-secondary: linear-gradient(135deg, hsl(25, 95%, 62%) 0%, hsl(35, 90%, 68%) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(240, 100%, 95%) 0%, hsl(250, 100%, 98%) 50%, hsl(260, 100%, 96%) 100%);
     --gradient-card: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(240, 20%, 99%) 100%);
+    --gradient-promo: linear-gradient(135deg, hsl(145, 85%, 48%, 0.1) 0%, hsl(245, 85%, 58%, 0.1) 50%, hsl(25, 95%, 62%, 0.1) 100%);
 
     /* Shadows */
     --shadow-soft: 0 4px 20px hsl(245, 85%, 58%, 0.1);
