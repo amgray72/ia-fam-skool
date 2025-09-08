@@ -154,7 +154,12 @@ export function WeeklyChallengesSection() {
         </div>
 
         <div className="text-center">
-          <Button variant="accent" size="lg" className="group">
+          <Button 
+            variant="accent" 
+            size="lg" 
+            className="group"
+            onClick={() => window.open('https://www.skool.com/ia-family-skool-3802/about?ref=d6a31ab101bd437286839beb3380ac92', '_blank')}
+          >
             <Zap className="w-5 h-5 mr-2 group-hover:animate-pulse" />
             Ver Todos los 52 Retos
           </Button>
