@@ -7,12 +7,12 @@ export function WeeklyChallengesSection() {
   const sampleChallenges = [
     {
       week: "Semana 1",
-      title: "Mi Primer Chatbot Familiar",
-      description: "Crear un chatbot simple que responda preguntas sobre la familia usando IA generativa.",
+      title: "Transforma tu dibujo con IA",
+      description: "Dibuja algo que te encante y con ayuda de mamá o papá, imagina cómo la IA puede transformarlo de manera mágica y divertida.",
       difficulty: "Principiante",
       duration: "45 min",
       participants: "Toda la familia",
-      skills: ["Prompts básicos", "Conversación IA", "Creatividad"]
+      skills: ["Creatividad", "Arte digital", "Transformación IA"]
     },
     {
       week: "Semana 12",
