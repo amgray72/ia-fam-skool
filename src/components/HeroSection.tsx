@@ -60,6 +60,7 @@ export function HeroSection() {
                 variant="outline" 
                 size="xl"
                 className="border-2 hover:border-primary/50"
+                onClick={() => window.open('https://www.skool.com/ia-family-skool-3802/about?ref=d6a31ab101bd437286839beb3380ac92', '_blank')}
               >
                 <Users className="w-5 h-5 mr-2" />
                 Ver Demo Gratuita
