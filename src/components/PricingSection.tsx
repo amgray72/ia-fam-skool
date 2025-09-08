@@ -1,9 +1,20 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Check, Star, Zap, Heart } from "lucide-react";
+import { Check, Star, Zap, Heart, GraduationCap, Gift, Clock } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function PricingSection() {
+  const [remainingSpots, setRemainingSpots] = useState(73);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRemainingSpots(prev => Math.max(0, prev - Math.floor(Math.random() * 2)));
+    }, 30000);
+    
+    return () => clearInterval(interval);
+  }, []);
+
   const features = [
     "52 retos semanales completos",
     "Guías paso a paso para padres",
@@ -110,6 +121,91 @@ export function PricingSection() {
             <div className="text-xs">500+ familias activas</div>
             <div className="text-xs">🏆 Mejor plataforma 2024</div>
           </div>
+        </div>
+
+        {/* Back to School Promotion */}
+        <div className="mt-16">
+          <Card className="bg-gradient-promo border-primary/20 shadow-strong overflow-hidden">
+            <CardContent className="p-8">
+              <div className="text-center mb-6">
+                <div className="flex items-center justify-center gap-2 mb-4">
+                  <Badge className="bg-success text-success-foreground animate-pulse">
+                    <GraduationCap className="w-4 h-4 mr-2" />
+                    VUELTA AL COLE 2024
+                  </Badge>
+                  <Badge variant="outline" className="border-primary text-primary">
+                    OFERTA LIMITADA
+                  </Badge>
+                </div>
+                
+                <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                  <span className="bg-gradient-primary bg-clip-text text-transparent">
+                    ¡ACCESO TOTALMENTE GRATUITO!
+                  </span>
+                </h3>
+                
+                <p className="text-lg text-muted-foreground mb-6">
+                  Las primeras <strong>100 familias</strong> tendrán acceso completo sin coste durante el nuevo curso escolar
+                </p>
+              </div>
+
+              <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                {/* Counter */}
+                <div className="text-center bg-background/90 backdrop-blur-sm rounded-xl px-6 py-4 shadow-soft">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Clock className="w-4 h-4 text-accent" />
+                    <span className="text-sm font-medium text-muted-foreground">PLAZAS RESTANTES</span>
+                  </div>
+                  <div className="text-3xl font-bold text-primary mb-2">
+                    {remainingSpots}
+                    <span className="text-lg text-muted-foreground">/100</span>
+                  </div>
+                  <div className="w-32 bg-muted rounded-full h-2">
+                    <div 
+                      className="bg-gradient-primary h-2 rounded-full transition-all duration-1000"
+                      style={{ width: `${((100 - remainingSpots) / 100) * 100}%` }}
+                    ></div>
+                  </div>
+                </div>
+
+                {/* Features */}
+                <div className="flex-1 grid grid-cols-2 gap-4 text-sm">
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-success" />
+                    <span>52 retos completos</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-success" />
+                    <span>Comunidad familiar</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-success" />
+                    <span>Sin compromisos</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-success" />
+                    <span>Ambiente 100% seguro</span>
+                  </div>
+                </div>
+
+                {/* CTA */}
+                <div className="text-center">
+                  <Button 
+                    variant="hero" 
+                    size="xl"
+                    className="group animate-glow"
+                    onClick={() => window.open('https://www.skool.com/ia-family-skool-3802/about?ref=d6a31ab101bd437286839beb3380ac92', '_blank')}
+                  >
+                    <Gift className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+                    Acceder GRATIS Ahora
+                  </Button>
+                  <p className="text-xs text-muted-foreground mt-2">
+                    * Promoción válida hasta agotar plazas
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
