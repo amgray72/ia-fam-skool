@@ -63,7 +63,12 @@ export function Footer() {
                 <Mail className="w-4 h-4" />
                 <span>hola@iafamilyskool.com</span>
               </div>
-              <Button variant="outline" size="sm" className="w-full">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="w-full"
+                onClick={() => window.open('https://www.skool.com/ia-family-skool-3802/about?ref=d6a31ab101bd437286839beb3380ac92', '_blank')}
+              >
                 <Mail className="w-4 h-4 mr-2" />
                 Contactar Soporte
               </Button>
